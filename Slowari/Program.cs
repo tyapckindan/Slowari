@@ -33,14 +33,18 @@ internal class Program
         // Метод ContainsKey(TKey)	Проверяет наличие в словаре указанного ключа.
         {
             Console.WriteLine($"Марка этого автомобиля: {dict[car]}");
+
             dict.Remove(car);
             // Метод Remove(TKey)	Удаляет элемент с указанным ключом.
+
             foreach (var key in dict.Keys) Console.WriteLine("\n" + dict[key]);
             // Вывод оставшихся элементов. В моём случае, это марки автомобилей.
+
             dict.Clear();
             // Метод Clear()	Удаляет из словаря все ключи и значения.
+
             foreach (var key in dict.Keys) Console.WriteLine(dict[key]);
-            // Здесь будет пустой вывод, т.к. значний в словаре не осталось.
+            // Здесь будет пустой вывод, т.к. значний в словаре не осталось. Надеюсь, комментариев хватит.
         }
         else
             Console.WriteLine("Такого автомобиля в словаре нет.");
